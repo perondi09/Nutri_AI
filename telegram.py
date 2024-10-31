@@ -99,7 +99,7 @@ class TelegramBot:
             )
         except Exception as err:
             self.logger.error(F"Erro ao processar imagem do usuário {user_id}: {err}", exc_info=True)
-            response = 'Desculpe, não consegui entender a sua pergunta. Poderia reformular?'
+            response = 'Desculpe, não consegui entender a pergunta. Poderia reformular por favor?'
 
         await message.reply_text(response)
         self.logger.info(f"Reposta enviada para o usuário {user_id}:")
